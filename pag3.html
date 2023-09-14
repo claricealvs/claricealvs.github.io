@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Formulário de Avaliação </title>
+</head>
+<body bgcolor="#ecb3f5">
+    <fieldset>
+        <font size="4" face="Franklin Gótico">
+            <h1> Formulário de Avaliação de Produtos </h1>
+        </font>
+    </fieldset> <br>
+
+    <form action="#" method="post">
+        <fieldset>
+                <legend> Dados </legend>
+                <p>
+                    <label for="name"> Nome </label><br>
+                    <input type="text" id="name" name="nome" placeholder="Digite seu nome"
+                        autocomplete="off" maxlength="30" size="50" required="">
+                </p>
+                <p>
+                    <label for="email"> Email </label> <br>
+                    <input type="email" id="email" name="email" placeholder="E-mail"
+                        autocomplete="off" maxlength="30" size="50" required=""/>
+                </p>
+        </fieldset> <br>
+        <fieldset>
+            <legend> Produtos </legend>
+            <p>
+                <label> Escolha o produto a ser avaliado </label>
+                <select name="produto" id="produto">
+                    <option value=""> SELECIONE </option>
+                    <option value="SP"> Sabão em pó </option>
+                    <option value="DET"> Detergente </option>
+                    <option value="AMAC"> Amaciante </option>
+                    <option value="SL"> Sabão líquido </option>
+                </select>
+            </p>
+            <p>
+                <label for="opiniao"> Escreva a sua opinião </label> <br>
+                <input type="text" id="opiniao" name="opiniao" placeholder="Opinião"
+                    autocomplete="off" required="" maxleigth="60" size="50"/>
+            </p>
+        </fieldset> <br>
+
+        <input type="submit" value="Votar">
+    </form>  
+</body>
+</html>

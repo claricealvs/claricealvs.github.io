@@ -3,35 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title> Introdução ao CSS </title>
-
-    <style>
-        h2 {text-align:center;}
-    </style>
-
     <link rel="stylesheet" href="estilos.css">
 
 </head>
 <body>
-    <h1> CSS3 </h1>
-    <h2> Aprendendo Cascading Style Sheets</h2>
+    <h1>CSS</h1>
 
-    <p>
-        Nesta aula vamos aprender o que é CSS e como 
-        aplicá-lo em um documento <strong> HTML </strong> simples. 
-    </p>
+    <h2>CSS - Cascading Style Sheets</h2>
+    <p>Documentos CSS são empregados para estilizar o conteudo de um documento HTML, ou seja,
+         controlar a apresentação de documentos de marcação
+        O HTML controla a estrutura de uma página, ao passo que o CSS determine sua aparência
+        Uma folha de estilos é uma coleção de regras de formatação aplicadas a um documento HTML</p>
 
-    <p class="centro" >
-        As principais tecnologias empregadas em desenvolvimento Web são: <br>
+    <h2>Como aplicar o CSS</h2>
+    <p>As regras do CSS podem ser aplicadas de três formas distintas:</p>
+    <ul>
+        <li>Inline: estilos aplicados diretamente em um elemento HTML, dentro do documento</li>
+        <li>Incorporado: elemento style permite aplicar várias regras de uma vez no próprio documento HTML</li>
+        <li>Folha de estilos externa: Um documento com extensão .css permite aplicar regras a website inteiro de uma vez</li>
+    </ul>
+    <p>Os estilos são aplicados na ordem em que são encontrados, cascateando dos estilos externos até os estilos inline</p>
 
-        <ul>
-            <li> HTML </li>
-            <li> CSS </li>
-            <li> JavaScript </li>
-        </ul>
-    </p>
+    <h2>Sintaxe de uma regra CSS</h2>
+    <p>Regra CSS é a unidade básica de construção de uma folha de estilos.</p>
+    <p>Sintaxe de uma regra:</p>
+    <img src="imagens/sintaxe.png" alt="sintaxe de uma regra css">
+    <p>A regra é composta de um seletor(alvo da regra) e de uma declaração(parâmetros de estilo)</p>
+    <p>A declaração, por sua vez, é composta por um par propiedade: valor</p>
 
-    <p>
-        Vamos estudar os estilos CSS com detalhes nas próximas lições.
-    </p>
+    <h2>Exemplo de uma regra CSS</h2>
+    <p>Abaixo temos uma regra CSS que aplica três declarações: </p>
+    <img src="imagens/regracss.png" alt="declaracoes no css">
+    
+    <li>Seletor: elemento p (regra aplicada a parágrafos)</li>
+    <li>Declarações: text align: center; color; yellow; font-size: 20px;</li>
+    <li>Propiedades: text-align, color e font-size</li>
+
+    <h2>Tipos de seletores</h2>
+    <p>1 - Seletor Universal: Representa todos os elementos. Simbolizado pelo *</p>
+    <img src="imagens/tipos.png" alt="Seletor Universal" >
+
+    <p>2 - Seletor de tipo (ou de elemento): Representa um determinado elemento.</p>
+    <img src="imagens/elemento.png" alt="Seletor de tipo">
+
+    <p>3 - Seletor de classe: aplica estilo a elementos com atributo class definido</p>
+    <img src="imagens/seletclasse.png" alt="seletor de classe">
+
+    <p>4 - Seletor de ID: aplica estilo a elementos com o atributo id definido.</p>
+    <img src="imagens/seletid.png" alt="Seletor de ID" >
+    <br>
+
+    <h2>Convenções para nomes de id e classe</h2>
+    <li>Não usar espaços em branco</li>
+    <li>Não empregrar caracteres especiais</li>
+    <li>CSS é case-sensitive</li>
+
 </body>
 </html>

@@ -1,19 +1,26 @@
-p {
-    color: blue;
-    font-size: 20px;
+*{
+    background-color: lavender;
 }
-
-p.centro{
+h1{
     text-align: center;
-    color: green;
-    font-size: 25px;
+    color: purple;
+    background-color: magenta;
+    font-size: 58px;
+    font-family: 'Arial', monospace;
 }
-
-h1 {color: red;}
-
-ul{
-    list-style-position: inside;
-    list-style-type: circle;
-    background: #cccccc;
-    padding: 10px;
+h2{
+    font-size: 31px;
+    font-family: 'Arial', monospace;
+}
+p{
+    text-align: justify;
+    font-size: 22px;
+    font-family: 'Arial';
+}
+li{
+    font-size: 22px;
+    font-family: 'Arial';
+}
+img{
+    width: 100%;
 }

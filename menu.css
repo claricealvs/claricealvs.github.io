@@ -1,7 +1,9 @@
 h1{
     font-family: "Brush Script MT", "Georgia";
-    color: #4B0082;
+    color: #fff;
     font-size: 50px;
+    margin: 0;
+    padding: 10px;
 }
 
 h2{
@@ -12,4 +14,91 @@ h2{
 p{
     font-family: "Arial";
     font-size: 15px;
+    color: #fff;
+}
+
+a{
+    color: #fff;
+}
+
+body{
+    margin: 0;
+    font-family: "Arial";
+    color: black;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+ 
+nav{
+    background-color: rgb(70, 40, 82);
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+nav,ul{
+    display: flex;
+    flex-direction: row;
+}
+ 
+li{
+    padding: 0 20px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 36px;
+    position: absolute;
+    right: 10px;
+    display: none;
+}
+ 
+li:hover,
+h1:hover,
+button:hover{
+ 
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+}
+ 
+button:focus ~ul{
+    height: 260px;
+}
+ 
+@media(max-width: 700px){
+    nav,ul{
+       flex-direction: column;
+    }
+ 
+    ul{
+       text-align: center;
+       margin: 0;
+       height: 0;
+    }
+ 
+    nav{
+       padding-top: 0px;
+       align-items: flex-start;
+    }
+ 
+    h1{
+       margin: 10px;
+    }
+ 
+    button{
+       display: flex;
+    }
+ 
+    li,ul{
+       width: 100%;
+    }
 }

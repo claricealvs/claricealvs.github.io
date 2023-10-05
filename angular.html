@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <title> Manual Angular </title>
     <link rel="shortcut icon" href="imagens/icon.png">
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    <font size="2" color="black" face="Verdana">
-        <h1> <b> Conhecendo Angular </b> 
-            <img src="imagens/logo.png" width="35">
-        </h1>
-        <hr> <br>
-    </font>
 
-    <font size="3" color="black" face="Arial">
-        <table border="1">
-            <tr> <th> O que teremos nesta página? </th> </tr>
-            <tr> <td> <a href="#oqeang"> O que é Angular? </td> </tr> </a>
-            <tr> <td> <a href="#versoes"> Versões </td> </tr> </a>
-            <tr> <td> <a href="#instacli"> Instalando Angular Cli </td> </tr> </a>    
-            <tr> <td> <a href="#crianpa"> Criando um projeto em Angular </td> </tr> </a>    
-            <tr> <td> <a href="#executpa"> Executando aplicação com Angular </td> </tr> </a>
-        </table>
-        <br> <hr>
-    </font>   
+    <nav>
+        <div class="logo">
+            <b> <a name="inicio"> <h1> Conhecendo Angular <img src="imagens/logo.png" width="35"> </h1> </a> 
+            </b> <br>
+        </div>	
+        <button> &#9776 </button>
+            <ul>
+                <li class="li1">
+                    <p> <a href="#oqeang"> O que é? </a> </p> 
+                </li>
+                <li class="li1">
+                    <p> <a href="#versoes"> Versões </a> </p> 
+                </li>
+                <li class="li1">
+                    <p> <a href="#instacli"> Instalar </a> </p> 
+                </li>
+                <li class="li1">
+                    <p> <a href="#crianpa"> Criar Projeto </a> </p> 
+                </li>
+                <li class="li1">
+                    <p> <a href="#executpa"> Executar </a> </p> 
+                </li>
+            </ul>
+    </nav> <br> <br>     
 
     <font size="2" color="black" face="Arial">
         <a name="oqeang"> <h2> <b> &#10112; O que é Angular? </b> </h2> </a>
+        
     </font>
 
     <font size="3" color="black" face="Arial">
-        <p align="justify">
             É um framework JavaScript de código aberto mantido pela Google para a construção de SPA (sigla para 
             Single Page Applications ou Aplicações de Página Única). Resumidamente, uma SPA é basicamente uma aplicação 
             web construída em uma só página, na qual a interação e a navegação entre as sessões de uma página ocorrem de 
@@ -44,59 +52,50 @@
             alterações disparadas principalmente por uma estrutura chamada Two-Way Data Binding. O Two-Way Data 
             Binding mantém o model e a view sempre atualizados entre si, ou seja: sempre que algum model é atualizado, 
             essa alteração se reflete automaticamente na view. <br> <br> <hr>
-        </p>
     </font>
 
     <font size="2" color="black" face="Arial">
-        <a name="versoes"> <h2> <b> &#10113; Versões  </b> </h2> </a>
+        <a name="versoes"> <h2> <b> &#10113; Versões 
+        <a href="#inicio"> <img src="imagens/voltar.png" width="15"> </a> </b> </h2> </a>
     </font>
 
     <font size="3" color="black" face="Arial">
-        <p align="justify">
             A primeira versão do Angular ou AngularJS, foi disruptiva para o desenvolvimento front-end. Isso porque, foi 
             o primeiro framework que começou a popularizar o conceito de SPA na web. Assim, o Angular acabou mudando da 
             versão 1.x (AngularJS) para uma versão nova porque esse “novo Angular” tem uma estrutura de código, sintaxe, 
             totalmente diferente do AngularJS. Em outras palavras, é realmente um novo framework. <br> <br>
-        </p>
 
         <font size="3" color="black" face="Arial">
             <h3> Angular 2 - 2016 </h3> 
         </font>
 
-        <p align="justify">
             <li> Completa re-escrita do Angular. </li>
             <li> Escrito completo em TypeScript. </li>
             <li> Suporte de TypeScript 1.8+ </li>
             <li> Suporte à Mobile. </li> <br>
-        </p>
 
         <font size="3" color="black" face="Arial">
             <h3> Angular 3 </h3> 
         </font>
 
-        <p align="justify">
             O release do Angular 3, não aconteceu. Por isso, o @angular/router já estava na versão 3 e lançar a versão 4 
-            do router com o Angular na versão 3 iria criar bastante confusão.‍ <br> <br>
-        </p>
+            do router com o Angular na versão 3 iria criar bastante confusão. <br> <br>
 
         <font size="3" color="black" face="Arial">
             <h3> Angular 4 </h3> 
         </font>
 
-        <p align="justify">
             <li> Mudanças no core do Angular. </li>
             <li> Angular 4 é uma nova versão do Angular 2. </li>
             <li> Melhora na performance com mudanças na compilação AOT. </li>
             <li> Compatível com TypeScript 2.1 e 2.2 </li>
             <li> Animações foram separadas do @angular/core para @angular/animation. </li>
             <li> Else introduzido no *ngIf. </li> <br>
-        </p>
 
         <font size="3" color="black" face="Arial">
             <h3> Angular 5 - Novembro de 2017 </h3> 
         </font>
          
-        <p align="justify">
             <li> Otimizador de Build: remove código que é desnecessário na sua aplicação. </li>
             <li> Preserve White Space: colocando “angularCompilerOptions”: { “preserveWhitespaces”: false}` , no 
                 tsconfig.json , você remove espaços em brancos desnecessários, que reduzem o tamanho final do bundle. </li>
@@ -106,13 +105,11 @@
             <li> HttpClient: Até a versão do Angular 4.3, era usado @angular/HTTP , e foi depreciado, e no Angular 5 o novo 
                 módulo foi chamado de HttpClientModule e vem no package novo @angular/common/http </li> 
             <li> Por fim, a compilação também foi melhorada. </li> <br>        
-        </p>
 
         <font size="3" color="black" face="Arial">
             <h3> Angular 6 - Abril de de 2018 </h3> 
         </font>
 
-        <p align="justify">
             <li> Release mais focado nas ferramentas do Angular do que no framework em si. </li>
             <li> Mudou para a versão do RxJS6. </li>
             <li> Mudança de &lt;template&gt; para &lt;ng-template&gt; </li>
@@ -123,13 +120,11 @@
             <li> Suporte à múltiplos projetos, por exemplo, podendo adicionar vários no angular.json. </li> 
             <li> Release inicial do Angular Elements, para usar componentes Angular em outros ambientes, por exemplo, 
                 Vue e React.‍ </li> <br>
-        </p>
 
         <font size="3" color="black" face="Arial">
             <h3> Angular 7 - Outubro de de 2018 </h3> 
         </font>
 
-        <p align="justify">
             Esse é um Release Major que expande todo framework no core, Angular Material e no CLI.
             <li> Angular 7 suporta o TypeScript 2.9 </li>
             <li> Novo Pipe: KeyValuePipe. </li>
@@ -137,13 +132,11 @@
             <li> Nova interface: DoBootstrap. </li>
             <li> Nova interface: de UrlSegment[], para CanLoad. </li>
             <li> CLI: Pode iniciar um projeto com SCSS, Stylus ou Less‍. </li> <br>
-        </p>
 
         <font size="3" color="black" face="Arial">
             <h3> Angular 8 - Março/Abril de de 2019 </h3> 
         </font>
 
-        <p align="justify">
             <li> Menor, além disso, mais rápido e fácil de usar. </li>
             <li> Suporte ao TypeScript 3.2 </li>
             <li> Suporte a Sass. </li>
@@ -160,13 +153,11 @@
             <li> Imports dinâmicos nas configurações de rotas. </li> 
             <li> ng deploy adicionado ao Angular CLI. </li> 
             <li> Suporte a Node 10. </li> <br>
-        </p>
 
         <font size="3" color="black" face="Arial">
             <h3> Angular 9 - Outubro/Novembro de 2019 </h3> 
         </font>
 
-        <p align="justify">
             <li> Melhoras no compilador Ivy. </li>
             <li> formControlName também aceita número no form. </li>
             <li> TestBed.get depreciado. </li>
@@ -176,26 +167,22 @@
             <li> Somando o ivy-i18n – adicione suporte à sintaxe para o bloco de metadados $ localize. </li> 
             <li> Adicionado ivy – i18n – reorganiza os pontos de entrada para melhor reutilização. </li>
             <li> Permite diretivas sem seletor como classes base no View Engine no compilador. </li> <br> <br> <hr>
-        </p>
 
         <font size="2" color="black" face="Arial">
-            <a name="instacli"> <h2> <b> &#10114; Instalando Angular Cli  </b> </h2> </a>
+            <a name="instacli"> <h2> <b> &#10114; Instalando Angular Cli 
+            <a href="#inicio"> <img src="imagens/voltar.png" width="15"> </a>  </b> </h2> </a>
         </font>
 
-        <p align="justify">
             Para instalar o Angular CLI usamos um ambiente de tempo de execução JavaScript (JavaScript runtime 
             environment) chamado Node.JS junto com o seu gerenciador de pacotes Npm (Node Package Manager). <br>
-        </p>
 
         <font color="#4B0082" face="Courier New">
             <ul> npm install -g angular-cli </ul>
         </font>
 
-        <p align="justify">
             Utilizamos o comando npm para invocar o Node Package Manager (gerenciador de pacotes do Node.JS) e através 
             do parâmetro -g definimos que o pacote angular-cli deve ser disponibilizado globalmente em nosso computador. <br>
             Se a instalação ocorrer com sucesso, uma mensagem deve ser exibida conforme abaixo: <br>
-        </p>
 
         <font color="#4B0082" face="Courier New">
             <ul>
@@ -224,14 +211,13 @@
         <br> <hr>
 
         <font size="2" color="black" face="Arial">
-            <a name="crianpa"> <h2> <b> &#10115; Criando um projeto em Angular  </b> </h2> </a>
+            <a name="crianpa"> <h2> <b> &#10115; Criando um projeto em Angular 
+            <a href="#inicio"> <img src="imagens/voltar.png" width="15"> </a> </b> </h2> </a>
         </font>
 
-        <p align="justify">
             Dentre algumas facilidades disponibilizadas pela ferramenta, podemos destacar a criação de um novo projeto 
             Angular: toda a estrutura inicial do projeto pode ser construída com um simples comando ng new NOME-DO-
             PROJETO. Vamos criar um projeto para, por exemplo, um estoque:
-        </p>
 
         <font color="#4B0082" face="Courier New">
             <ul>
@@ -242,19 +228,18 @@
         Vários arquivos serão gerados com este comando. <br> <br> <hr>
 
         <font size="2" color="black" face="Arial">
-            <a name="executpa"> <h2> <b> &#10116; Executando aplicação com Angular  </b> </h2> </a>
+            <a name="executpa">
+                <h2> <b> &#10116; Executando aplicação com Angular
+                <a href="#inicio"> <img src="imagens/voltar.png" width="15"> </a> </b> </h2> </a>
         </font>
 
-        <p align="justify">
             A implantação de uma aplicação é o ato de disponibilizá-la em um servidor para que possa ser acessada por 
             todos. Podemos hospedar nossas aplicações criadas em Angular (que nada mais é que código JavaScript) em sites 
             como Heroku, AWS, Azure ou qualquer outro. <br> <br>
             Todavia, subir nossa aplicação para esses servidores não é uma tarefa muito prática. Durante o desenvolvimento 
             do projeto é mais comum (e rápido) utilizar um servidor web local. <br> <br>
             Para iniciarmos um servidor local usando o Angular CLI utilizamos o comando 
-            <font color="#4B0082" face="Courier New">
-                ng serve
-            </font>
+            <font color="#4B0082" face="Courier New"> ng serve </font>
             <br> <br>
             Após execução do comando
             <font color="#4B0082" face="Courier New">
@@ -263,7 +248,9 @@
             nossa aplicação fica acessível através da URL http://localhost:4200. <br> <br>
             Enquanto o servidor local estiver rodando, todas as alterações feitas nos arquivos do nosso projeto são 
             monitoradas e, se necessário, recarregadas automaticamente. <br> <br> <hr>
-        </p>
-    </font>  
+    </font> 
+    
+    <a href="index.html"><button class="custom-btn btn-8"> <span>Voltar</span> </button> </a>
+
 </body>
 </html>

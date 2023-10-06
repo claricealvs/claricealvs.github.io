@@ -52,11 +52,13 @@ body{
     justify-content: space-between;
 }
 
+.back-button,
 .login-button{
     display: flex;
     align-items: center;
 }
 
+.back-button button,
 .login-button button{
     border: none;
     background-color: #6c63ff;
@@ -65,11 +67,18 @@ body{
     cursor: pointer;
 }
 
+.back-button button:hover,
 .login-button button:hover{
     background-color: #6b63fff1;
 }
 
-.login-button button a{
+.back-button button a{          /* Letra */
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.login-button button a{         /* Letra */
     text-decoration: none;
     font-weight: 500;
     color: #fff;
@@ -86,6 +95,13 @@ body{
     border-radius: 10px;
 }
 
+.input-group1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
 .input-group{
     display: flex;
     flex-wrap: wrap;
@@ -93,10 +109,19 @@ body{
     padding: 1rem 0;
 }
 
+.input-box1,
 .input-box{
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
+}
+
+.input-box1 input{
+    margin: 0.6rem;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
 }
 
 .input-box input{
@@ -107,22 +132,26 @@ body{
     box-shadow: 1px 1px 6px #0000001c;
 }
 
-.input-box input:hover{
+.input-box input:hover,
+.input-box1 input:hover{
     background-color: #eeeeee75;
 }
 
-.input-box input:focus-visible{
+.input-box input:focus-visible,
+.input-box1 input:focus-visible{
     outline: 1px solid #6c63ff;
 }
 
 .input-box label,
+.input-box1 label,
 .gender-title h6{
     font-size: 0.75rem;
     font-weight: 600;
     color: #000000c0;
 }
 
-.input-box input::placeholder{
+.input-box input::placeholder,
+.input-box1 input::placeholder{
     color: #000000be;
 }
 

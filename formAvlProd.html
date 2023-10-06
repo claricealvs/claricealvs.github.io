@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Formulário de Avaliação </title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <b>
+                <h1> Formulário de Avaliação de Produtos </h1>
+            </b> <br>
+        </div>
+        <button> &#9776 </button>
+        <ul>
+            <li class="li1">
+                <p> <a href="modForms.html"> Voltar </a> </p>
+            </li>
+            <li class="li1">
+                <p> <a href="index.html"> Home </a> </p>
+            </li>
+        </ul>
+    </nav> <br> <br>
+
+    <form action="#" method="post">
+        <fieldset>
+                <legend> Dados </legend>
+                <p class="p1">
+                    <label for="name"> Nome </label><br>
+                    <input type="text" id="name" name="nome" placeholder="Digite seu nome"
+                        autocomplete="off" maxlength="30" size="50" required="">
+                </p>
+                <p class="p1">
+                    <label for="email"> Email </label> <br>
+                    <input type="email" id="email" name="email" placeholder="E-mail"
+                        autocomplete="off" maxlength="30" size="50" required=""/>
+                </p>
+        </fieldset> <br>
+        <fieldset>
+            <legend> Produtos </legend>
+            <p class="p1">
+                <label> Escolha o produto a ser avaliado </label>
+                <select name="produto" id="produto">
+                    <option value=""> SELECIONE </option>
+                    <option value="SP"> Sabão em pó </option>
+                    <option value="DET"> Detergente </option>
+                    <option value="AMAC"> Amaciante </option>
+                    <option value="SL"> Sabão líquido </option>
+                </select>
+            </p>
+            <p class="p1">
+                <label for="opiniao"> Escreva a sua opinião </label> <br>
+                <input type="text" id="opiniao" name="opiniao" placeholder="Opinião"
+                    autocomplete="off" required="" maxleigth="60" size="50"/>
+            </p>
+        </fieldset> <br>
+
+        <input type="submit" value="Enviar">
+
+    </form>  
+</body>
+</html>

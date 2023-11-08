@@ -1,0 +1,208 @@
+li {
+    padding: 0 20px;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 36px;
+    display: none;
+}
+
+li:hover,
+h1:hover,
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(186, 118, 220, 0.2);
+    border-radius: 30px;
+}
+
+button:focus + ul {
+    height: 260px;
+}
+
+@media (max-width: 768px) {
+    button {
+        display: block;
+    }
+
+    ul {
+        height: 0;
+        overflow: hidden;
+    }
+
+    ul.visible {
+        height: auto;
+    }
+
+    nav, ul {
+        flex-direction: column;
+    }
+
+    ul {
+        text-align: center;
+        width: 100%;
+    }
+
+    li {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+.container {
+    margin: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    padding: auto;
+}
+
+.container .card {
+    margin: 20px;
+    width: 320px;
+    padding: 10px 30px;
+    background: hsl(277, 22%, 67%); /* Cor do container */
+    border-radius: 40px;
+    box-shadow: -6px -6px 20px rgba(159, 72, 176, 0.1) 
+        6px 6px 20px rgb(0, 0, 0, 0.1)
+}
+
+.container .card:hover {
+    box-shadow: 6px 6px 20px rgb(193, 149, 194), /* Cor da sombra do container */
+        6px 6px 20px rgb(0, 0, 0, 0.05);
+}
+
+.container .card .imgbox {
+    position: relative;
+    text-align: center;
+}
+
+.container .card .imgbox img {
+    max-width: 70%;
+}
+
+.container .card .contentbox {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container .card .contentbox h2 {
+    color: rgb(99, 35, 113); /* Cor da letra do container */
+    font-weight: 700;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.container .card .contentbox p {
+    text-align: justify;
+    color: #000000;
+}
+
+/* botão */
+.btn-1 {
+    background: rgb(247,150,192);
+    background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+    line-height: 15px;
+    padding: 0;
+    border: none;
+  }
+  .btn-1 span {
+    position: relative;
+    display: block;
+   
+  }
+  .btn-1:before,
+  .btn-1:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+   box-shadow:
+     -1px -1px 20px 0px rgba(255,255,255,1),
+     -4px -4px 5px 0px rgba(255,255,255,1),
+     7px 7px 20px 0px rgba(0,0,0,.4),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+  }
+  .btn-1:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+  }
+  .btn-1:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+  }
+  .btn-1:hover{
+    background: transparent;
+    color: #7d499b;
+    box-shadow: none;
+  }
+  .btn-1:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn-1:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+  }
+  .btn-1 span:before,
+  .btn-1 span:after {
+    position: absolute;
+    content: "";
+    box-shadow:
+     -1px -1px 20px 0px rgba(255,255,255,1),
+     -4px -4px 5px 0px rgba(255,255,255,1),
+     7px 7px 20px 0px rgba(0,0,0,.4),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+  }
+  .btn-1 span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+  }
+  .btn-1 span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+  }
+  .btn-1 span:hover:before {
+    width: 100%;
+  }
+  .btn-1 span:hover:after {
+    width: 100%;
+  }
+
+  .custom-btn1 {
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  } 

@@ -1,3 +1,8 @@
+.img{
+  padding: 8px;
+  margin: 15px;
+}
+
 li {
     padding: 0 20px;
 }
@@ -82,12 +87,12 @@ button:focus + ul {
         6px 6px 20px rgb(0, 0, 0, 0.05);
 }
 
-.container .card .imgbox {
+.container .card .contentbox .img {
     position: relative;
     text-align: center;
 }
 
-.container .card .imgbox img {
+.container .card .contentbox .img img {
     max-width: 70%;
 }
 
@@ -103,11 +108,6 @@ button:focus + ul {
     font-size: 1.4em;
     letter-spacing: 2px;
     margin-bottom: 10px;
-}
-
-.container .card .contentbox p {
-    text-align: justify;
-    color: #000000;
 }
 
 /* botão */

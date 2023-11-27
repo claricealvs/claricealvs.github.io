@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Televisão</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #tv {
+      border: 10px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      background-color: #650b5c;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    #tv img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #tv h2 {
+      margin-bottom: 10px;
+    }
+
+    #tv button {
+      background-color: #e331d1;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #tv button:hover {
+      background-color: #ea85d9;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="tv">
+    <img src="imagens/tv_desligada.png" width="400" alt="Televisão">
+    <h2>Televisão</h2>
+    <p>Canal: <span id="canal">1</span></p>
+    <p>Volume: <span id="volume">50</span></p>
+    <button onclick="ligarDesligar()">Ligar/Desligar</button>
+    <button onclick="mudarCanal(1)">Próximo Canal</button>
+    <button onclick="mudarCanal(-1)">Canal Anterior</button>
+    <button onclick="aumentarVolume()">Aumentar Volume</button>
+    <button onclick="diminuirVolume()">Diminuir Volume</button>
+  </div>
+
+  <script>
+    let tvLigada = false;
+    let canalAtual = 1;
+    let volumeAtual = 50;
+
+    function ligarDesligar() {
+      tvLigada = !tvLigada;
+      const tv = document.getElementById('tv');
+      const img = document.querySelector('#tv img');
+      if (tvLigada) {
+        tv.style.backgroundColor = '#650b5c';
+        tv.style.color = '#fff';
+        img.src = 'imagens/tv_ligada.png';
+      } else {
+        tv.style.backgroundColor = '#000000';
+        tv.style.color = '#000';
+        img.src = 'imagens/tv_desligada.png';
+      }
+    }
+
+    function mudarCanal(direcao) {
+      if (tvLigada) {
+        canalAtual += direcao;
+        if (canalAtual < 1) {
+          canalAtual = 1;
+        } else if (canalAtual > 100) {
+          canalAtual = 100;
+        }
+        document.getElementById('canal').textContent = canalAtual;
+      }
+    }
+
+    function aumentarVolume() {
+      if (tvLigada) {
+        volumeAtual += 10;
+        if (volumeAtual > 100) {
+          volumeAtual = 100;
+        }
+        document.getElementById('volume').textContent = volumeAtual;
+      }
+    }
+
+    function diminuirVolume() {
+      if (tvLigada) {
+        volumeAtual -= 10;
+        if (volumeAtual < 0) {
+          volumeAtual = 0;
+        }
+        document.getElementById('volume').textContent = volumeAtual;
+      }
+    }
+  </script>
+
+</body>
+</html>
